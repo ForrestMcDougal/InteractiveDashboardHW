@@ -68,7 +68,7 @@ function buildGauge(sample) {
 					}
 				}
 			],
-			title: 'Washes Per Week',
+			title: 'Scrubs Per Week',
 			xaxis: {
 				zeroline: false,
 				showticklabels: false,
