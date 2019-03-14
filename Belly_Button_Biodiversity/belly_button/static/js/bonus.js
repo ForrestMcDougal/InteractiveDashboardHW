@@ -4,7 +4,7 @@ function buildGauge(sample) {
 		const level = sampleName.WFREQ;
 
 		// Trig to calc meter point
-		const degrees = 180 - level * 180 / 9,
+		const degrees = 171 - level * 18,
 			radius = 0.5;
 		const radians = degrees * Math.PI / 180;
 		const x = radius * Math.cos(radians);
@@ -30,13 +30,15 @@ function buildGauge(sample) {
 				hoverinfo: 'text+name'
 			},
 			{
-				values: [ 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 / 9, 50 ],
+				values: [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10 ],
 				rotation: 90,
-				text: [ '8-9', '7-8', '6-7', '5-6', '4-5', '3-4', '2-3', '1-2', '0-1', '' ],
+				text: [ '9', '8', '7', '6', '5', '4', '3', '2', '1', '0', '' ],
 				textinfo: 'text',
 				textposition: 'inside',
 				marker: {
 					colors: [
+						'rgba(255, 255, 255, 0)',
+						'#FF0000',
 						'#CCFFCC',
 						'#99FF99',
 						'#66FF66',
@@ -45,11 +47,10 @@ function buildGauge(sample) {
 						'#00CC00',
 						'#009900',
 						'#006600',
-						'#003300',
-						'rgba(255, 255, 255, 0)'
-					]
+						'#003300'
+					].reverse()
 				},
-				labels: [ '8-9', '7-8', '6-7', '5-6', '4-5', '3-4', '2-3', '1-2', '0-1', '' ],
+				labels: [ '9', '8', '7', '6', '5', '4', '3', '2', '1', '0', '' ],
 				hoverinfo: 'label',
 				hole: 0.5,
 				type: 'pie',
